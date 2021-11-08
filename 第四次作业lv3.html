@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            name: "陈琳莎",
+            age: 17,
+            family: ['dad', 'mom', 'dog'],
+            say() {
+                console.log('hi')
+            }
+        }
+        const person1 = {}
+        function clone(origin, target) {
+            //判断是否为数组
+            const cloneTargrt = Array.isArray(origin) ? [] : {};
+            for (const k in origin) {
+                target[k] = cloneTargrt[k]
+            }
+            return target
+        }
+        console.log(clone(person, person1))
+    </script>
+</body>
+
+</html>
